@@ -1,0 +1,27 @@
+{%  extends 'base.html.twig' %}
+{% block title 'Accueil' %}
+{% block body %}
+    <div class="jumbotron text-center" >
+        <div class="container">
+            <H1>Maison Régnier</H1>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Les Pièces favorites</h2>
+        <div class="row flex">
+            {% for piece in pieces %}
+                <div class="col-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <H5 class="card-title">
+                                <a href="#">{{ piece.titre }}</a>
+                            </H5>
+                            <p class="card-text">au {{ piece.formatEtage() }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title piece.titre %}
+
+{% block body %}
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-8">
+
+            </div>
+            <div class="col-md-4">
+                <h1>{{ piece.titre }}</h1>
+                <p>du {{ piece.formatEtage }}</p>
+            </div>
+        </div>
+    </div>
+<div class="container mt-4">
+    <nav class="nav nav-tabs mt-4" id="tab"></nav>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Switch</h2>
+            <table class="table table-striped">
+                <tr>
+                    <td class="mb-2">Lumière</td>
+                    <td><button onclick="{{ piece.lightOn(piece.lumiereId) }}" class="btn btn-success">On</button> <a href="" class="btn btn-danger">Off</a></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="col-md-6">
+            <h2>Divers</h2>
+
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}
+
